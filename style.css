@@ -1,0 +1,102 @@
+body {
+  background-color: rgb(206, 206, 206);
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 40px;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+}
+
+.clock {
+  height: 360px;
+  width: 360px;
+  background-color: rgb(148, 182, 154);
+  border-radius: 50% 50%;
+  border: 7px solid rgb(193, 155, 100);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.486);
+  position: relative;
+  z-index: 2;
+}
+
+.numbers div {
+  font-size: 30px;
+  color: rgb(145, 98, 31);
+  font-weight: bold;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  /*display: flex;*/
+}
+
+.numbers .twelve {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.numbers .three {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.numbers .six {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.numbers .nine {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.arrows::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 96, 54);
+  border-radius: 50% 50%;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  z-index: 4;
+}
+
+.arrows div {
+  position: absolute;
+  width: 7px;
+  height: 140px;
+  border-radius: 50% 50% 0 0;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  transform-origin: bottom center;
+  bottom: 50%;
+  z-index: 3;
+}
+.arrows .hour {
+  background-color: rgb(209, 146, 28);
+  height: 90px;
+  transform: rotate(30deg);
+}
+.arrows .min {
+  background-color: rgb(209, 146, 28);
+  transform: rotate(80deg);
+}
+.arrows .sec {
+  background-color: brown;
+  transform: rotate(250deg);
+}
